@@ -1,12 +1,6 @@
 #include<iostream>
 #include<fstream>
 #include<windows.h>
-#include<cmath>
-#include<cstdlib>
-#include<algorithm>
-#include<vector>
-#include<stack>
-#include<queue>
 using namespace std;
 
 void wypisz_cale(int T[9][9]);
@@ -65,7 +59,7 @@ int main()
 	bool mozna_wstawiac_w_kolumne[9][9] ={true};
 	bool mozna_wstawiac_w_kwadrat[3][3][9] ={true};
 	cout<<"czytac z konsoli(1), czy zpliku plik_sudoku.txt(1)?\n";
- 	cout<<"podaj liczby wierszami odzielone spacj¹, 0 oznacza puste miejsce\n";
+ 	cout<<"podaj liczby wierszami odzielone spacjÅ¡, 0 oznacza puste miejsce\n";
  	cin>>wybor;
  	if(wybor)
  	{
@@ -146,7 +140,7 @@ void brute_force(int T[9][9])
 	}
 	else
 	{
-		cout<<"skoñczy³em!!!\n";
+		cout<<"skoÅ„czyÅ‚em!!!\n";
 		wypisz_do_pliku(T);		
 		wypisz_cale(T);
 	}
@@ -156,8 +150,8 @@ void brute_force(int T[9][9])
 void rozwiazuj(int T[9][9], bool bT[9][9][9], int ile_wolnych_wiersz[9], int ile_wolnych_kolumna[9], int ile_wolnych_kwadrat[3][3], bool mozna_wstawiac_w_wiersz[9][9], bool mozna_wstawiac_w_kolumne[9][9], bool mozna_wstawiac_w_kwadrat[3][3][9])
 {
 	analizuj_wszystko(T, bT, ile_wolnych_wiersz, ile_wolnych_kolumna, ile_wolnych_kwadrat, mozna_wstawiac_w_wiersz, mozna_wstawiac_w_kolumne, mozna_wstawiac_w_kwadrat);
-	cout<<"rozwi¹zuje si³owo...\n";
-	brute_force(T);// na razie tylko to dzia³a... :(
+	cout<<"rozwiÅ¡zuje siÅ‚owo...\n";
+	brute_force(T);// na razie tylko to dziaÅ‚a... :(
 }
 
 void wypisz_cale(int T[9][9])
